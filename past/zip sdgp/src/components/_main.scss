@@ -1,0 +1,108 @@
+// Imprort Poppins font sizes (Google Font)
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$astro11-font-path: "../assets/vendor/Astro11";
+@font-face {
+  font-family: "Astro11";
+  src: url("#{$astro11-font-path}/2 Astro11 sinhala font by Aluth.com.TTF")
+    format("TTF");
+}
+
+$main-font: "Poppins", sans-serif;
+$sec-font: "Astro11";
+
+//Color palatte
+$main: #ffffff;
+$red: #f67474;
+$blue: #7abaf2;
+$brown: #9d7871;
+
+//Light Colors
+$red-light: lighten($red, 15%);
+$blue-light: lighten($blue, 15%);
+
+//Dark Colors
+$red-darken: darken($red, 15%);
+$blue-darken: darken($blue, 15%);
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: $main-font;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+}
+
+//Font-faces
+@mixin headline {
+  font-family: $main-font;
+  font-size: 40px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+@mixin title {
+  font-family: $main-font;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: left;
+}
+
+@mixin Subheader {
+  font-family: $main-font;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: left;
+}
+
+@mixin Large-Body {
+  font-family: $main-font;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: left;
+}
+
+@mixin btn {
+  font-family: $main-font;
+  font-size: 10px !important;
+  font-weight: bold !important;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@mixin Nav-Llinks {
+  font-family: $main-font;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+}
+
+@mixin Sinhala {
+  font-family: $sec-font;
+  font-size: 69px;
+}
+
+.screens {
+  margin-top: 80px;
+}

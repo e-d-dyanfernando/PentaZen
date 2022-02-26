@@ -1,0 +1,32 @@
+@import '../main';
+
+.btn--outline {
+    @include btn;
+    width: 160px;
+    height: 40px;
+    margin-left: 36px;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: rgba(218, 59, 27, 0.1) !important;
+    border-color: transparent !important;
+    color: $brown !important;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .btn--outline{
+        width: 100%;
+        margin: 16px 0 0 0;
+    }
+
+}
+
+.btn--outline:hover{
+    border: solid 2px rgba(157, 120, 113, 0.1) !important;
+    background-color: rgba(157, 120, 113, 0.05) !important;
+}
+
+.btn--outline:active{
+    border: solid 2px rgba(157, 120, 113, 0.15) !important;
+    background-color: rgba(157, 120, 113, 0.15) !important;
+}
