@@ -9,3 +9,6 @@ class help : AppCompatActivity() {
         setContentView(R.layout.activity_help)
     }
 }
+
+
+// dyan
