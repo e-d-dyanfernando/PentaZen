@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/view_u"
         android:layout_width="411dp"
         android:layout_height="240dp"
         android:background="@drawable/shape_1"
@@ -28,7 +28,7 @@
         app:layout_constraintEnd_toStartOf="@+id/image_upload"
         app:layout_constraintHorizontal_bias="0.385"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/view_u"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_launcher_background"
         android:src="@drawable/camera" />
@@ -42,7 +42,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/view_u"
         app:layout_constraintVertical_bias="0.824"
         app:srcCompat="@drawable/ic_launcher_background"
         android:src="@drawable/help" />
@@ -70,7 +70,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.892"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/view_u"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_launcher_background"
         android:src="@drawable/upload" />
@@ -81,11 +81,11 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.823"
+        app:layout_constraintHorizontal_bias="0.901"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.096"
-        tools:srcCompat="@tools:sample/avatars"/>
+        app:layout_constraintVertical_bias="0.054"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/textView4"
@@ -98,7 +98,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.179"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view_u"
         app:layout_constraintVertical_bias="0.112" />
 
     <TextView
@@ -112,7 +112,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.211"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view_u"
         app:layout_constraintVertical_bias="0.178" />
 
     <ImageButton

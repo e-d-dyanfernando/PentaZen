@@ -9,7 +9,7 @@
     <View
         android:id="@+id/view4"
         android:layout_width="411dp"
-        android:layout_height="240dp"
+        android:layout_height="200dp"
         android:background="@drawable/shape_1"
         android:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -25,10 +25,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.911"
+        app:layout_constraintHorizontal_bias="0.897"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view4"
-        app:layout_constraintVertical_bias="0.129"
+        app:layout_constraintVertical_bias="0.051"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -40,10 +40,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.123"
         app:layout_constraintStart_toStartOf="@+id/view4"
         app:layout_constraintTop_toTopOf="@+id/view4"
-        app:layout_constraintVertical_bias="0.16" />
+        app:layout_constraintVertical_bias="0.155" />
 
     <ImageView
         android:id="@+id/imageView3"
