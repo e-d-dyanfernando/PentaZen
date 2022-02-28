@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Sign_Master_V1</string>
+    <string name="textview">TextView</string>
+    <string name="image1">image1</string>
+    <string name="image2">image2</string>
+    <string name="image3">image3</string>
+    <string name="image4">image4</string>
+    <string name="dict_icon">dict_icon</string>
+    <string name="dictionary">Dictionary</string>
 </resources>
