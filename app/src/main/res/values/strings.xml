@@ -7,4 +7,18 @@
     <string name="image4">image4</string>
     <string name="dict_icon">dict_icon</string>
     <string name="dictionary">Dictionary</string>
+    <string name="back_button">back_button</string>
+    <string name="help_centre">help_centre</string>
+    <string name="chat">Chat</string>
+    <string name="f_a_q">F A Q</string>
+    <string name="email">Email</string>
+    <string name="get_solution_from_our_inbox">Get solution from our inbox</string>
+    <string name="start_a_conversation_now">Start a conversation now</string>
+    <string name="find_intelligent_answers_instantly">Find intelligent answers instantly</string>
+    <string name="help_center">Help Centre</string>
+    <string name="tell_us_how_we_can_help">Tell us how we can help</string>
+    <string name="helpimage">helpImage</string>
+    <string name="chatimg">chatImg</string>
+    <string name="faqimg">faqImg</string>
+    <string name="emailimg">emailImg</string>
 </resources>
