@@ -9,7 +9,7 @@ import android.widget.ImageView
 class help : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_help)
 
         val chat_whatsapp = findViewById<ImageView>(R.id.chat_Img)
         val chat_faq = findViewById<ImageView>(R.id.faq_Img)
