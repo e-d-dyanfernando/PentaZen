@@ -16,10 +16,8 @@
         <entry key="..\:/Users/User/Desktop/Penatzen_GitHub/app/src/main/res/drawable/border.xml" value="0.2115" />
         <entry key="..\:/Users/User/Desktop/Penatzen_GitHub/app/src/main/res/drawable/shape_1.xml" value="0.2115" />
         <entry key="..\:/Users/User/Desktop/Penatzen_GitHub/app/src/main/res/layout/activity_camera.xml" value="0.15670289855072464" />
-        <entry key="..\:/Users/User/Desktop/Penatzen_GitHub/app/src/main/res/layout/activity_dictionary.xml" value="0.14476885644768855" />
-        <entry key="..\:/Users/User/Desktop/Penatzen_GitHub/app/src/main/res/layout/activity_faq.xml" value="0.15" />
+        <entry key="..\:/Users/User/Desktop/Penatzen_GitHub/app/src/main/res/layout/activity_dictionary.xml" value="0.25" />
         <entry key="..\:/Users/User/Desktop/Penatzen_GitHub/app/src/main/res/layout/activity_help.xml" value="0.22" />
-        <entry key="..\:/Users/User/Desktop/Penatzen_GitHub/app/src/main/res/layout/activity_help2.xml" value="0.15172101449275363" />
         <entry key="..\:/Users/User/Desktop/Penatzen_GitHub/app/src/main/res/layout/activity_image_upload.xml" value="0.15670289855072464" />
         <entry key="..\:/Users/User/Desktop/Penatzen_GitHub/app/src/main/res/layout/activity_main.xml" value="0.15670289855072464" />
         <entry key="..\:/Users/praba/OneDrive/Desktop/GitHub/PentaZen/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.198" />
@@ -35,14 +33,15 @@
         <entry key="..\:/Users/praba/OneDrive/Desktop/GitHub/PentaZen/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2065" />
         <entry key="..\:/Users/praba/OneDrive/Desktop/GitHub/PentaZen/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2065" />
         <entry key="app/src/main/res/drawable/shape_1.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_dictionary.xml" value="0.2385910034179688" />
+        <entry key="app/src/main/res/layout/activity_dictionary.xml" value="0.2914123535156251" />
+        <entry key="app/src/main/res/layout/activity_dictionary_page2.xml" value="0.2066863574468104" />
         <entry key="app/src/main/res/layout/activity_help.xml" value="0.19157608695652173" />
         <entry key="app/src/main/res/layout/activity_image_upload.xml" value="0.19246673583984372" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

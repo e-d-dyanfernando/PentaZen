@@ -30,4 +30,8 @@
     <string name="is_it_paid_or_open_source">Is it paid or open source?</string>
     <string name="what_are_the_options_available_in_the_sign_master_application">What are the options available in the sign master application?</string>
     <string name="f_a_qs">F A Qs</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+    <string name="verbs">Verbs</string>
+    <string name="greetings">Greetings</string>
 </resources>
