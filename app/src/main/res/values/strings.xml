@@ -10,7 +10,6 @@
     <string name="back_button">back_button</string>
     <string name="help_centre">help_centre</string>
     <string name="chat">Chat</string>
-    <string name="f_a_q">F A Q</string>
     <string name="email">Email</string>
     <string name="get_solution_from_our_inbox">Get solution from our inbox</string>
     <string name="start_a_conversation_now">Start a conversation now</string>
@@ -21,4 +20,14 @@
     <string name="chatimg">chatImg</string>
     <string name="faqimg">faqImg</string>
     <string name="emailimg">emailImg</string>
+    <string name="f_a_q">F A Q</string>
+    <string name="todo" />
+    <string name="help_img" />
+    <string name="chat_img" />
+    <string name="faqimage" />
+    <string name="it_is_a_fully_free_mobile_app_and_usable_by_anyone">It is a fully free mobile app and usable by anyone.</string>
+    <string name="our_application_has_mainly_four_features_they_are_open_camera_upload_image_sign_dictionary_and_help_page_which_helps_the_users_to_contact_via_whatsapp_and_gmail">Our application has mainly four features They are open camera , upload image , sign dictionary and help page which helps the users to contact via whatsapp and gmail.</string>
+    <string name="is_it_paid_or_open_source">Is it paid or open source?</string>
+    <string name="what_are_the_options_available_in_the_sign_master_application">What are the options available in the sign master application?</string>
+    <string name="f_a_qs">F A Qs</string>
 </resources>

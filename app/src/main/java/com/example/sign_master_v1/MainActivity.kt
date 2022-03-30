@@ -15,9 +15,6 @@ class MainActivity : AppCompatActivity() {
         val img_bt_dictionary = findViewById<ImageButton>(R.id.dictionary)
         val img_bt_help = findViewById<ImageButton>(R.id.help)
 
-        //val bt_back = findViewById<ImageButton>(R.id.back)
-
-
         img_bt_camera.setOnClickListener {
             val CAMERA = Intent(this, camera::class.java)
             startActivity(CAMERA)
@@ -31,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(DICTIONARY)
         }
         img_bt_help.setOnClickListener {
-            val HELP = Intent(this, help::class.java)
+            val HELP = Intent(this, Help::class.java)
             startActivity(HELP)
         }
 

@@ -6,28 +6,31 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 
-class help : AppCompatActivity() {
+class Help : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_help)
 
-        val chat_whatsapp = findViewById<ImageView>(R.id.chat_Img)
-        val chat_faq = findViewById<ImageView>(R.id.faq_Img)
-        val chat_email = findViewById<ImageView>(R.id.email_Img)
+        val chatWhatsapp = findViewById<ImageView>(R.id.img2)
+        val chatFaq = findViewById<ImageView>(R.id.img3)
+        val chatEmail = findViewById<ImageView>(R.id.img4)
 
-        chat_whatsapp.setOnClickListener {
+        chatWhatsapp.setOnClickListener {
             val number = "940765703737"
             val whatsappUri = Uri.parse("http://api.whatsapp.com/send?phone=$number")
             val i = Intent(Intent.ACTION_VIEW, whatsappUri)
             startActivity(i)
         }
 
-        chat_email.setOnClickListener {
+        chatFaq.setOnClickListener {
+            val faqPage = Intent(this, FaqActivity::class.java)
+            startActivity(faqPage)
+        }
+
+        chatEmail.setOnClickListener {
             val i = Intent(Intent.ACTION_SEND)
             i.type = "text/plain"
             i.putExtra(Intent.EXTRA_EMAIL, arrayOf("Pentazen@gmail.com"))
-            //i.putExtra(Intent.EXTRA_TEXT,"Hello , I think I found Your Dog")
-            //i.putExtra(Intent.EXTRA_SUBJECT,"Your lost Dog")
             startActivity(i)
         }
 
