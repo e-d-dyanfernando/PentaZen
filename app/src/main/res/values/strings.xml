@@ -34,4 +34,18 @@
     <string name="back">Back</string>
     <string name="verbs">Verbs</string>
     <string name="greetings">Greetings</string>
+    <string name="let_s_get_start">Let\'s Get Start</string>
+    <string name="let_s_get_started">Let\'s Get Started</string>
+    <string name="welcome_to_the">Welcome to the</string>
+    <string name="logo">logo</string>
+    <string name="sign_master">Sign Master</string>
+    <string name="welcomeImage">TODO</string>
+    <string name="todo2">TODO</string>
+    <string name="todo3">TODO</string>
+    <string name="todo4">TODO</string>
+    <string name="todo5">TODO</string>
+    <string name="let_s_start_sign_language">Let\'s start Sign Language</string>
+    <string name="hi">Hi !</string>
+    <string name="todo6">TODO</string>
+    <string name="todo7">TODO</string>
 </resources>

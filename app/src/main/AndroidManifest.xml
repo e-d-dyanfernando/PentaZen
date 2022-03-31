@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sign_Master_V1">
         <activity
+            android:name=".WelcomePage"
+            android:exported="false" />
+        <activity
             android:name=".DictionaryPage2"
             android:exported="false" />
         <activity

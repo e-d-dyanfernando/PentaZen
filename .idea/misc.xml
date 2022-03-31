@@ -35,9 +35,11 @@
         <entry key="app/src/main/res/drawable/shape_1.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_dictionary.xml" value="0.2914123535156251" />
         <entry key="app/src/main/res/layout/activity_dictionary_page2.xml" value="0.2066863574468104" />
+        <entry key="app/src/main/res/layout/activity_first_page.xml" value="0.20334320068359377" />
         <entry key="app/src/main/res/layout/activity_help.xml" value="0.19157608695652173" />
         <entry key="app/src/main/res/layout/activity_image_upload.xml" value="0.19246673583984372" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.15505371093750006" />
+        <entry key="app/src/main/res/layout/activity_welcome_page.xml" value="0.1" />
       </map>
     </option>
   </component>
