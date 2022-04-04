@@ -9,6 +9,7 @@ import android.provider.MediaStore
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import com.example.sign_master_v1.ml.Model
 import org.tensorflow.lite.support.image.TensorImage
 import java.io.File
@@ -57,7 +58,25 @@ class image_upload : AppCompatActivity() {
             val outputs = model.process(image)
             val probability = outputs.probabilityAsCategoryList
 
-            Log.i("OUTPUT",probability.toString())
+            //Log.i("OUTPUT",probability.toString())
+
+            var max = 0.0000000000
+            var cat = ""
+            for (catergory in probability){
+                var temp = catergory.toString().split("=")
+                var newTemp = temp[2].replace(")","").replace(">","")
+                var value = newTemp.toDouble()
+                var name = temp[0].split(" ")[1].replace('"',' ')
+
+                if(value > max){
+                    max = value.toDouble()
+                    cat = name
+                }
+            }
+
+            Log.i("output ",cat+" "+ max.toString())
+
+            findViewById<TextView>(R.id.upload_output).setText(cat+" "+ max.toString())
 
 // Releases model resources if no longer used.
             model.close()
