@@ -76,8 +76,8 @@
 
         <TextView
             android:id="@+id/camera_output"
-            android:layout_width="382dp"
-            android:layout_height="54dp"
+            android:layout_width="345dp"
+            android:layout_height="53dp"
             android:layout_marginBottom="408dp"
             android:background="@drawable/radius"
             android:padding="5dp"
@@ -93,49 +93,51 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="385dp"
-            android:layout_height="91dp"
-            android:layout_marginBottom="304dp"
+            android:layout_width="339dp"
+            android:layout_height="111dp"
+            android:layout_marginBottom="284dp"
             android:background="@drawable/rectangle_shape"
             android:text="@string/our_application_has_mainly_four_features_they_are_open_camera_upload_image_sign_dictionary_and_help_page_which_helps_the_users_to_contact_via_whatsapp_and_gmail"
+            android:textColor="#0096c7"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.208"
+            app:layout_constraintHorizontal_bias="0.171"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="TextContrastCheck" />
 
         <TextView
             android:id="@+id/textView5"
-            android:layout_width="382dp"
-            android:layout_height="54dp"
+            android:layout_width="345dp"
+            android:layout_height="53dp"
             android:background="@drawable/radius"
             android:text="@string/is_it_paid_or_open_source"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.185"
+            app:layout_constraintHorizontal_bias="0.187"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.693"
+            app:layout_constraintVertical_bias="0.71"
             tools:ignore="TextContrastCheck" />
 
         <TextView
             android:id="@+id/textView6"
-            android:layout_width="382dp"
-            android:layout_height="54dp"
+            android:layout_width="345dp"
+            android:layout_height="53dp"
             android:background="@drawable/rectangle_shape"
             android:text="@string/it_is_a_fully_free_mobile_app_and_usable_by_anyone"
+            android:textColor="#0096c7"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.185"
+            app:layout_constraintHorizontal_bias="0.187"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.785"
+            app:layout_constraintVertical_bias="0.8"
             tools:ignore="TextContrastCheck" />
 
         <ImageView
@@ -150,5 +152,21 @@
             app:layout_constraintVertical_bias="0.361"
             app:srcCompat="@drawable/qa" />
 
-   </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/help_desc"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/ask_your_questions2"
+            android:textAllCaps="false"
+            android:textColor="#FFFCFC"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.121"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view_u"
+            app:layout_constraintVertical_bias="0.189" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

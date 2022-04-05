@@ -1,14 +1,11 @@
 <resources>
-    <string name="app_name">Sign_Master_V1</string>
-    <string name="textview">TextView</string>
+    <string name="app_name">Sign Master</string>
     <string name="image1">image1</string>
     <string name="image2">image2</string>
     <string name="image3">image3</string>
     <string name="image4">image4</string>
     <string name="dict_icon">dict_icon</string>
-    <string name="dictionary">Dictionary</string>
     <string name="back_button">back_button</string>
-    <string name="help_centre">help_centre</string>
     <string name="chat">Chat</string>
     <string name="email">Email</string>
     <string name="get_solution_from_our_inbox">Get solution from our inbox</string>
@@ -41,11 +38,24 @@
     <string name="sign_master">Sign Master</string>
     <string name="welcomeImage">TODO</string>
     <string name="todo2">TODO</string>
-    <string name="todo3">TODO</string>
     <string name="todo4">TODO</string>
     <string name="todo5">TODO</string>
     <string name="let_s_start_sign_language">Let\'s start Sign Language</string>
     <string name="hi">Hi !</string>
     <string name="todo6">TODO</string>
     <string name="todo7">TODO</string>
+    <string name="help_centre2">Help Centre</string>
+    <string name="ask_your_questions">Ask Your Questions</string>
+    <string name="upload">Upload</string>
+    <string name="todo1">TODO</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="todo3">TODO</string>
+    <string name="todo45">TODO45</string>
+    <string name="upload_from_your_phone_gallery">Upload from your phone gallery☺</string>
+    <string name="tell_us_how_we_can_help2">Tell us How We can Help😀</string>
+    <string name="ask_your_questions2">Ask Your Questions🙂</string>
+    <string name="see_info_about_sign_meanings">See Info about Sign Meanings😉</string>
+    <string name="textview">TextView</string>
+    <string name="dictionary">Dictionary</string>
+    <string name="learn_sign_language">Learn Sign Language</string>
 </resources>
