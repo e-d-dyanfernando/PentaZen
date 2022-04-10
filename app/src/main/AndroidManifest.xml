@@ -15,9 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sign_Master_V1" >
-        <activity
-            android:name=".dictionary_two"
-            android:exported="false" />
+
         <activity
             android:name=".WelcomePage"
             android:exported="true" >
@@ -27,18 +25,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".DictionaryPage2"
-            android:exported="false" />
+
         <activity
             android:name=".FaqActivity"
             android:exported="false" />
         <activity
             android:name=".Help"
             android:exported="false" />
-        <activity
-            android:name=".help"
-            android:exported="false" />
+
         <activity
             android:name=".dictionary"
             android:exported="false" />
