@@ -161,7 +161,7 @@ class camera : AppCompatActivity(),TextToSpeech.OnInitListener {
                 }
             }
 
-            Log.i("output ",cat+" ")
+            Log.i("output ",cat+"  ")
             findViewById<TextView>(R.id.camera_output).text = cat+" ";
 
         }
