@@ -9,8 +9,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
+import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.FileProvider
@@ -22,12 +24,16 @@ import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
 
-class camera : AppCompatActivity() {
+class camera : AppCompatActivity(),TextToSpeech.OnInitListener {
 
     val REQUEST_IMAGE_CAPTURE = 1
     var bitmap: Bitmap? = null
     lateinit var currentPhotoPath: String
     private lateinit var binding: ActivityCameraBinding
+
+    private var tts: TextToSpeech? = null
+    private var buttonSpeak: ImageButton? = null
+    private var editText: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,10 +46,54 @@ class camera : AppCompatActivity() {
             dispatchTakePictureIntent()
         }
 
+
+        binding.bkBtnCam.setOnClickListener {
+            val Cam_bkBtn = Intent(this, MainActivity::class.java)
+            startActivity(Cam_bkBtn)
+        }
+
+
         var cam_button: Button = findViewById(R.id.cam_button)
         cam_button.setOnClickListener{
             dispatchTakePictureIntent()
         }
+
+        buttonSpeak = findViewById(R.id.voice_cam)
+        editText = findViewById(R.id.camera_output)
+
+        buttonSpeak!!.isEnabled = false;
+        tts = TextToSpeech(this, this)
+
+        buttonSpeak!!.setOnClickListener { speakOut() }
+    }
+
+    override fun onInit(status: Int) {
+
+        if (status == TextToSpeech.SUCCESS) {
+            // set US English as language for tts
+            val result = tts!!.setLanguage(Locale.UK)
+            if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                Log.e("TTS","The Language specified is not supported!")
+            }
+            else {
+                buttonSpeak!!.isEnabled = true
+            }
+        } else {
+            Log.e("TTS", "Initilization Failed!")
+        }
+    }
+
+    private fun speakOut() {
+        val text = editText!!.text.toString()
+        tts!!.speak(text, TextToSpeech.QUEUE_FLUSH, null,"")
+    }
+
+    public override fun onDestroy() {
+        if (tts != null) {
+            tts!!.stop()
+            tts!!.shutdown()
+        }
+        super.onDestroy()
     }
 
     private fun dispatchTakePictureIntent() {
@@ -111,8 +161,8 @@ class camera : AppCompatActivity() {
                 }
             }
 
-            Log.i("output ",cat+" "+ max.toString())
-            findViewById<TextView>(R.id.camera_output).text = cat+" "+ max.toString();
+            Log.i("output ",cat+" ")
+            findViewById<TextView>(R.id.camera_output).text = cat+" ";
 
         }
     }

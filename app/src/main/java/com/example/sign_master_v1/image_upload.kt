@@ -6,15 +6,18 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.sign_master_v1.ml.Model
 import org.tensorflow.lite.support.image.TensorImage
 import java.io.File
+import java.util.*
 
-class image_upload : AppCompatActivity() {
+class image_upload : AppCompatActivity(),TextToSpeech.OnInitListener {
 
     lateinit var upload_image:ImageView
     lateinit var upload_button:Button
@@ -23,9 +26,20 @@ class image_upload : AppCompatActivity() {
 
     var imageUri:Uri? = null
 
+    private var tts: TextToSpeech? = null
+    private var buttonSpeak: ImageButton? = null
+    private var editText: TextView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_image_upload)
+
+        val bkBtnUpload = findViewById<ImageButton>(R.id.bk_btn_upload)
+
+        bkBtnUpload.setOnClickListener {
+            val Upload_bkBtn = Intent(this, MainActivity::class.java)
+            startActivity(Upload_bkBtn)
+        }
 
         upload_image = findViewById(R.id.up_img)
         upload_button = findViewById(R.id.upload_button)
@@ -34,6 +48,43 @@ class image_upload : AppCompatActivity() {
             val gallery = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
             startActivityForResult(gallery, pick_image)
         }
+
+        buttonSpeak = findViewById(R.id.voice_upload)
+        editText = findViewById(R.id.upload_output)
+
+        buttonSpeak!!.isEnabled = false;
+        tts = TextToSpeech(this, this)
+
+        buttonSpeak!!.setOnClickListener { speakOut() }
+    }
+
+    override fun onInit(status: Int) {
+
+        if (status == TextToSpeech.SUCCESS) {
+            // set US English as language for tts
+            val result = tts!!.setLanguage(Locale.UK)
+            if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                Log.e("TTS","The Language specified is not supported!")
+            }
+            else {
+                buttonSpeak!!.isEnabled = true
+            }
+        } else {
+            Log.e("TTS", "Initilization Failed!")
+        }
+    }
+
+    private fun speakOut() {
+        val text = editText!!.text.toString()
+        tts!!.speak(text, TextToSpeech.QUEUE_FLUSH, null,"")
+    }
+
+    public override fun onDestroy() {
+        if (tts != null) {
+            tts!!.stop()
+            tts!!.shutdown()
+        }
+        super.onDestroy()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -74,9 +125,9 @@ class image_upload : AppCompatActivity() {
                 }
             }
 
-            Log.i("output ",cat+" "+ max.toString())
+            Log.i("output ",cat+" ")
 
-            findViewById<TextView>(R.id.upload_output).setText(cat+" "+ max.toString())
+            findViewById<TextView>(R.id.upload_output).setText(cat+" ")
 
 // Releases model resources if no longer used.
             model.close()

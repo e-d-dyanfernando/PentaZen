@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
         val img_bt_dictionary = findViewById<ImageButton>(R.id.dictionary)
         val img_bt_help = findViewById<ImageButton>(R.id.help)
 
+        val bkBtnMenu = findViewById<ImageButton>(R.id.bk_btn_menu)
+
         img_bt_camera.setOnClickListener {
             val CAMERA = Intent(this, camera::class.java)
             startActivity(CAMERA)
@@ -31,10 +33,9 @@ class MainActivity : AppCompatActivity() {
             val HELP = Intent(this, Help::class.java)
             startActivity(HELP)
         }
-
-        //bt_back.setOnClickListener {
-           // val BACK = Intent(this, back::class.java)
-            //startActivity(BACK)
-        //}
+        bkBtnMenu.setOnClickListener {
+            val Menu_bkBtn = Intent(this, WelcomePage::class.java)
+            startActivity(Menu_bkBtn)
+        }
     }
 }

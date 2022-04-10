@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageButton
 import android.widget.ImageView
 
 class Help : AppCompatActivity() {
@@ -32,6 +33,13 @@ class Help : AppCompatActivity() {
             i.type = "text/plain"
             i.putExtra(Intent.EXTRA_EMAIL, arrayOf("Pentazen@gmail.com"))
             startActivity(i)
+        }
+
+        val bkBtnHelp = findViewById<ImageButton>(R.id.bk_btn_help)
+
+        bkBtnHelp.setOnClickListener {
+            val Help_bkBtn = Intent(this, MainActivity::class.java)
+            startActivity(Help_bkBtn)
         }
 
     }
