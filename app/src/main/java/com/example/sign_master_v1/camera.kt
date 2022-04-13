@@ -46,12 +46,10 @@ class camera : AppCompatActivity(),TextToSpeech.OnInitListener {
             dispatchTakePictureIntent()
         }
 
-
         binding.bkBtnCam.setOnClickListener {
             val Cam_bkBtn = Intent(this, MainActivity::class.java)
             startActivity(Cam_bkBtn)
         }
-
 
         var cam_button: Button = findViewById(R.id.cam_button)
         cam_button.setOnClickListener{
@@ -161,7 +159,7 @@ class camera : AppCompatActivity(),TextToSpeech.OnInitListener {
                 }
             }
 
-            Log.i("output ",cat+"  ")
+            Log.i("output ",cat+" ")
             findViewById<TextView>(R.id.camera_output).text = cat+" ";
 
         }
