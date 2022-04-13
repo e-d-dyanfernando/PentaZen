@@ -202,19 +202,19 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
-        android:id="@+id/bk_btn_dic2"
+        android:id="@+id/bk_btn_help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/backbtn"
-        android:minHeight="48dp"
+        android:background="@drawable/custom_button"
+        android:contentDescription="@string/todo6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.049"
+        app:layout_constraintVertical_bias="0.034"
         app:srcCompat="?attr/actionModeCloseDrawable"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/textView13"

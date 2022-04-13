@@ -10,7 +10,7 @@ class FaqActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_faq)
 
-        val bkBtnFaq = findViewById<ImageButton>(R.id.bk_btn_faq)
+        val bkBtnFaq = findViewById<ImageButton>(R.id.bk_btn_dic2)
 
         bkBtnFaq.setOnClickListener {
             val FAQ_bkBtn = Intent(this, Help::class.java)

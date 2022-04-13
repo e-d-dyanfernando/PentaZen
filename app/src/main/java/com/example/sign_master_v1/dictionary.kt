@@ -11,7 +11,7 @@ class dictionary : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dictionary)
 
-        val bkBtnDic = findViewById<ImageButton>(R.id.bk_btn_dic)
+        val bkBtnDic = findViewById<ImageButton>(R.id.bk_btn_help)
 
         bkBtnDic.setOnClickListener {
             val Dic_bkBtn = Intent(this, MainActivity::class.java)
