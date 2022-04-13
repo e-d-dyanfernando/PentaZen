@@ -8,9 +8,8 @@
 
     <TextView
         android:id="@+id/upload_output"
-        android:layout_width="239dp"
-        android:layout_height="37dp"
-        android:text="@string/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.232"
@@ -34,33 +33,35 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="131dp"
-        android:layout_height="35dp"
+        android:layout_width="209dp"
+        android:layout_height="46dp"
+        android:fontFamily="sans-serif"
         android:text="@string/upload_image"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.136" />
+        app:layout_constraintVertical_bias="0.115" />
 
     <TextView
         android:id="@+id/help_desc"
-        android:layout_width="210dp"
-        android:layout_height="47dp"
+        android:layout_width="201dp"
+        android:layout_height="58dp"
         android:fontFamily="sans-serif"
         android:text="@string/upload_from_your_phone_gallery"
         android:textAllCaps="false"
-        android:textColor="#FFFCFC"
-        android:textSize="18sp"
+        android:textColor="@color/purple_200"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintHorizontal_bias="0.119"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view_u"
-        app:layout_constraintVertical_bias="0.206" />
+        app:layout_constraintVertical_bias="0.207" />
 
     <Button
         android:id="@+id/upload_button"

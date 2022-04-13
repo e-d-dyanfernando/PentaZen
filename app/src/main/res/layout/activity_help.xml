@@ -37,19 +37,20 @@
 
     <TextView
         android:id="@+id/help_desc"
-        android:layout_width="220dp"
-        android:layout_height="40dp"
+        android:layout_width="215dp"
+        android:layout_height="51dp"
         android:fontFamily="sans-serif"
         android:text="@string/tell_us_how_we_can_help2"
         android:textAllCaps="false"
-        android:textColor="#FFFCFC"
-        android:textSize="18sp"
+        android:textColor="@color/purple_200"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view_u"
         app:layout_constraintVertical_bias="0.206" />
+
 
     <ImageView
         android:id="@+id/img1"
@@ -61,9 +62,8 @@
         app:layout_constraintHorizontal_bias="0.938"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view_u"
-        app:layout_constraintVertical_bias="0.098"
-        app:srcCompat="@drawable/help_img" />
-
+        app:layout_constraintVertical_bias="0.074"
+        app:srcCompat="@drawable/helpicon" />
 
     <TextView
         android:id="@+id/tv1"
@@ -103,12 +103,12 @@
 
     <ImageView
         android:id="@+id/img4"
-        android:layout_width="95dp"
-        android:layout_height="88dp"
-        android:layout_marginTop="588dp"
+        android:layout_width="126dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="596dp"
         android:contentDescription="@string/chat_img"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/email" />
@@ -208,7 +208,7 @@
         android:id="@+id/textview3"
         android:layout_width="372dp"
         android:layout_height="111dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -218,12 +218,14 @@
         android:id="@+id/bk_btn_help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023"
-        app:srcCompat="?attr/actionModeCloseDrawable" />
+        app:srcCompat="?attr/actionModeCloseDrawable"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

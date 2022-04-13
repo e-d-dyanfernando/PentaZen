@@ -28,24 +28,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/faq_topic"
-            android:layout_width="195dp"
-            android:layout_height="38dp"
-            android:background="#FFFFFF"
-            android:fontFamily="sans-serif-black"
-            android:text="@string/f_a_qs"
-            android:textAlignment="center"
-            android:textColor="#0D47A1"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.126"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/view_u"
-            app:layout_constraintVertical_bias="0.119" />
-
         <ImageView
             android:id="@+id/img1"
             android:layout_width="150dp"
@@ -56,7 +38,7 @@
             app:layout_constraintHorizontal_bias="0.938"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/view_u"
-            app:layout_constraintVertical_bias="0.011"
+            app:layout_constraintVertical_bias="0.05"
             app:srcCompat="@drawable/faqs" />
 
         <TextView
@@ -69,6 +51,7 @@
             android:text="@string/what_are_the_options_available_in_the_sign_master_application"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.185"
@@ -83,7 +66,7 @@
             android:layout_marginBottom="284dp"
             android:background="@drawable/rectangle_shape"
             android:text="@string/our_application_has_mainly_four_features_they_are_open_camera_upload_image_sign_dictionary_and_help_page_which_helps_the_users_to_contact_via_whatsapp_and_gmail"
-            android:textColor="#0096c7"
+            android:textColor="@color/purple_200"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -98,6 +81,7 @@
             android:layout_height="53dp"
             android:background="@drawable/radius"
             android:text="@string/is_it_paid_or_open_source"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -114,7 +98,7 @@
             android:layout_height="53dp"
             android:background="@drawable/rectangle_shape"
             android:text="@string/it_is_a_fully_free_mobile_app_and_usable_by_anyone"
-            android:textColor="#0096c7"
+            android:textColor="@color/purple_200"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -144,8 +128,8 @@
             android:fontFamily="sans-serif"
             android:text="@string/ask_your_questions2"
             android:textAllCaps="false"
-            android:textColor="#FFFCFC"
-            android:textSize="18sp"
+            android:textColor="@color/purple_200"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.121"
@@ -164,6 +148,22 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.021"
             app:srcCompat="?attr/actionModeCloseDrawable" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="F A Qs"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.076"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.129" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
