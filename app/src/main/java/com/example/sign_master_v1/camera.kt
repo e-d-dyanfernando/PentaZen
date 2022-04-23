@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.Matrix
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -18,9 +19,18 @@ import android.widget.TextView
 import androidx.core.content.FileProvider
 import com.example.sign_master_v1.databinding.ActivityCameraBinding
 import com.example.sign_master_v1.ml.Model
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
 import org.tensorflow.lite.support.image.TensorImage
+import java.io.BufferedReader
 import java.io.File
 import java.io.IOException
+import java.io.InputStreamReader
+import java.lang.StringBuilder
+import java.net.HttpURLConnection
+import java.net.URL
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -34,6 +44,8 @@ class camera : AppCompatActivity(),TextToSpeech.OnInitListener {
     private var tts: TextToSpeech? = null
     private var buttonSpeak: ImageButton? = null
     private var editText: TextView? = null
+
+    var define_sign = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,7 +94,8 @@ class camera : AppCompatActivity(),TextToSpeech.OnInitListener {
     }
 
     private fun speakOut() {
-        val text = editText!!.text.toString()
+        val text = define_sign
+            //editText!!.text.toString()
         tts!!.speak(text, TextToSpeech.QUEUE_FLUSH, null,"")
     }
 
@@ -119,7 +132,6 @@ class camera : AppCompatActivity(),TextToSpeech.OnInitListener {
             }
         }
     }
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == Activity.RESULT_OK && requestCode == REQUEST_IMAGE_CAPTURE) {
@@ -128,7 +140,7 @@ class camera : AppCompatActivity(),TextToSpeech.OnInitListener {
                 Uri.fromFile(File(currentPhotoPath))
             );
 
-            val resizzed = Bitmap.createScaledBitmap(mBitmap_org!!, 224, 224, false)
+            val resizzed = Bitmap.createScaledBitmap(mBitmap_org!!, 224, 224, false).rotate(90f)
             findViewById<ImageView>(R.id.image).setImageBitmap(resizzed)
 
             val model = Model.newInstance(applicationContext)
@@ -160,7 +172,35 @@ class camera : AppCompatActivity(),TextToSpeech.OnInitListener {
             }
 
             Log.i("output ",cat+" ")
-            findViewById<TextView>(R.id.camera_output).text = cat+" ";
+
+            define_sign = cat
+
+            runBlocking {
+                launch {
+                    withContext(Dispatchers.IO){
+                        val link = "https://iot.loopweb.lk/converter.php?word=${cat.trim()}"
+                        val url = URL(link)
+                        val con = url.openConnection() as HttpURLConnection
+                        val stb = StringBuilder()
+                        val bf = BufferedReader(InputStreamReader(con.inputStream))
+                        var line:String? = bf.readLine()
+
+                        while (line != null) {
+                            stb.append(line + "\n")
+                            line = bf.readLine()
+                        }
+
+                        Log.i("tag link", link)
+                        Log.i("tag output", stb.toString())
+
+                        runOnUiThread {
+                            findViewById<TextView>(R.id.camera_output).setText(stb.toString())
+                        }
+                    }
+                }
+            }
+
+            //findViewById<TextView>(R.id.camera_output).text = cat+" ";
 
         }
     }
@@ -178,6 +218,10 @@ class camera : AppCompatActivity(),TextToSpeech.OnInitListener {
             // Save a file: path for use with ACTION_VIEW intents
             currentPhotoPath = absolutePath
         }
+    }
 
+    fun Bitmap.rotate(degrees: Float): Bitmap {
+        val matrix = Matrix().apply { postRotate(degrees) }
+        return Bitmap.createBitmap(this, 0, 0, width, height, matrix, true)
     }
 }

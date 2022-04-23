@@ -16,6 +16,15 @@ import com.example.sign_master_v1.ml.Model
 import org.tensorflow.lite.support.image.TensorImage
 import java.io.File
 import java.util.*
+import java.io.BufferedReader
+import java.io.InputStreamReader
+import java.net.URL
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
+import java.lang.StringBuilder
+import java.net.HttpURLConnection
 
 class image_upload : AppCompatActivity(),TextToSpeech.OnInitListener {
 
@@ -23,6 +32,8 @@ class image_upload : AppCompatActivity(),TextToSpeech.OnInitListener {
     lateinit var upload_button:Button
 
     val pick_image = 100
+
+    var detect_sign = ""
 
     var imageUri:Uri? = null
 
@@ -75,7 +86,8 @@ class image_upload : AppCompatActivity(),TextToSpeech.OnInitListener {
     }
 
     private fun speakOut() {
-        val text = editText!!.text.toString()
+        val text = detect_sign
+            //editText!!.text.toString()
         tts!!.speak(text, TextToSpeech.QUEUE_FLUSH, null,"")
     }
 
@@ -127,7 +139,34 @@ class image_upload : AppCompatActivity(),TextToSpeech.OnInitListener {
 
             Log.i("output ",cat+" ")
 
-            findViewById<TextView>(R.id.upload_output).setText(cat+" ")
+            detect_sign = cat
+
+            runBlocking {
+                launch {
+                    withContext(Dispatchers.IO){
+                        val link = "https://iot.loopweb.lk/converter.php?word=${cat.trim()}"
+                        val url = URL(link)
+                        val con = url.openConnection() as HttpURLConnection
+                        val stb = StringBuilder()
+                        val bf = BufferedReader(InputStreamReader(con.inputStream))
+                        var line:String? = bf.readLine()
+
+                        while (line != null) {
+                            stb.append(line + "\n")
+                            line = bf.readLine()
+                        }
+
+                        Log.i("tag link", link)
+                        Log.i("tag output", stb.toString())
+
+                        runOnUiThread {
+                            findViewById<TextView>(R.id.upload_output).setText(stb.toString())
+                        }
+                    }
+                }
+            }
+
+            //findViewById<TextView>(R.id.upload_output).setText(cat+" ")
 
 // Releases model resources if no longer used.
             model.close()
